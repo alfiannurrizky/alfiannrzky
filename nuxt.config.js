@@ -21,22 +21,20 @@ export default {
       {
         hid: "description",
         name: "description",
-        content: process.env.npm_package_description || ""
-      }
+        content: process.env.npm_package_description || "",
+      },
     ],
     link: [
       { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
       {
         rel: "stylesheet",
-        href:
-          "https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap"
+        href: "https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap",
       },
       {
         rel: "stylesheet",
-        href:
-          "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css"
-      }
-    ]
+        href: "https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css",
+      },
+    ],
   },
   /*
    ** Global CSS
@@ -46,7 +44,17 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: [{ src: "@/plugins/aos", mode: "client" }],
+  purgeCSS: {
+    whitelist: [
+      "aos-init",
+      "aos-animate",
+      "data-aos-delay",
+      "data-aos-duration",
+      "fade-up",
+      "zoom-in",
+    ],
+  },
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
@@ -61,11 +69,11 @@ export default {
    */
   modules: [
     // Doc: https://bootstrap-vue.js.org
-    "bootstrap-vue/nuxt"
+    "bootstrap-vue/nuxt",
   ],
   /*
    ** Build configuration
    ** See https://nuxtjs.org/api/configuration-build/
    */
-  build: {}
+  build: {},
 };

@@ -1,13 +1,19 @@
 body {
   user-select: none;
-  font-family: "Quicksand", sans-serif;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  background-color: #fff;
-  background-image: url(../bg.svg);
+  background: #44a08d;
+  background: -webkit-linear-gradient(to right, #093637, #44a08d);
+  background: linear-gradient(to right, #093637, #44a08d);
+
   background-attachment: fixed;
-  color: #000;
+  color: #ffffffd3;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 /* MAIN STYLING */
@@ -39,7 +45,7 @@ img {
 .social-icons a {
   font-size: 25px;
   margin: 15px;
-  color: rgba(0, 0, 0, 0.712);
+  color: rgba(245, 243, 243, 0.712);
 }
 .social-icons a:hover {
   color: #000;
